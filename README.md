@@ -48,7 +48,7 @@ GPU acceleration is recommended in the following environments.
 An example of PINN solver for Burgers' equation is implemented in `main.py`. The PINN is trained by the following procedure.
 
 1. Building the keras network model
-    ```Python
+    ```python
     from lib.network import Network
     network = Network.build().
     network.summary()
@@ -74,12 +74,12 @@ An example of PINN solver for Burgers' equation is implemented in `main.py`. The
     _________________________________________________________________
     ```
 2. Building the PINN model (`nu` is the kinematic viscosity).
-    ```Python
+    ```python
     from lib.pinn import PINN
     pinn = PINN(network, nu).build()
     ```
 3. Building training data.
-    ```Python
+    ```python
     # create training input
     tx_eqn = np.random.rand(num_train_samples, 2)          # t_eqn =  0 ~ +1
     tx_eqn[..., 1] = 2 * tx_eqn[..., 1] - 1                # x_eqn = -1 ~ +1
@@ -94,7 +94,7 @@ An example of PINN solver for Burgers' equation is implemented in `main.py`. The
     ```
 
 4. Optimizing the PINN model for the training data.
-    ```Python
+    ```python
     from lib.optimizer import L_BFGS_B
     x_train = [tx_eqn, tx_ini, tx_bnd]
     y_train = [ u_eqn,  u_ini,  u_bnd]
