@@ -1,6 +1,6 @@
 # pinn_burgers
 
-This module implements the Physics Informed Neural Network (PINN) model for Burgers' equation. Burgers' equation is given by `du/dt + u(du/dx) = nu (d^2 u)/(dt^2)`, where `nu` is the kinematic viscosity. This is a good simplification of Navier-Stokes equation where the velocity is in one spatial dimension and the external force is neglected and without any pressure gradient. We give the initial condition `u(t=0, x) = -sin(x)` and the boundary condition `u(t, x=-1,+1) = 0`. The PINN model predicts `u(t, x)` for the input `(t, x)`.
+This module implements the Physics Informed Neural Network (PINN) model for Burgers' equation. Burgers' equation is given by `du/dt + u(du/dx) = nu (d^2 u)/(dx^2)`, where `nu` is the kinematic viscosity. This is a good simplification of Navier-Stokes equation where the velocity is in one spatial dimension and the external force is neglected and without any pressure gradient. We give the initial condition `u(t=0, x) = -sin(x)` and the boundary condition `u(t, x=-1,+1) = 0`. The PINN model predicts `u(t, x)` for the input `(t, x)`.
 
 ## Description
 
